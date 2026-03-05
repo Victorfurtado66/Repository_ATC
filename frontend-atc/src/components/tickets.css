@@ -1,0 +1,45 @@
+.tickets-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.tickets-container form {
+  margin-bottom: 20px;
+}
+
+.tickets-container input,
+.tickets-container textarea,
+.tickets-container select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.tickets-container button {
+  padding: 10px 20px;
+  background: #00C49F;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.tickets-container button:hover {
+  background: #009e7a;
+}
+
+.tickets-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tickets-container li {
+  background: #f9f9f9;
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}

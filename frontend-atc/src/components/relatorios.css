@@ -1,0 +1,28 @@
+.relatorios-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.relatorios-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.relatorios-container button {
+  padding: 12px 20px;
+  background: #FFBB28;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.relatorios-container button:hover {
+  background: #e6a91f;
+}

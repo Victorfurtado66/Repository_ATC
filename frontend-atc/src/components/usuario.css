@@ -1,0 +1,45 @@
+.usuarios-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.usuarios-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.usuarios-container input,
+.usuarios-container select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.usuarios-container button {
+  width: 100%;
+  padding: 12px;
+  background: #FFBB28;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.usuarios-container button:hover {
+  background: #e6a91f;
+}
+
+.erro {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}

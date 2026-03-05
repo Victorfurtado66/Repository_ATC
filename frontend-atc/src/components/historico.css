@@ -1,0 +1,39 @@
+.historico-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.historico-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.historico-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.historico-container li {
+  background: #f9f9f9;
+  margin: 12px 0;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.historico-container li strong {
+  color: #0088FE;
+  font-size: 18px;
+}
+
+.historico-container li span {
+  display: block;
+  margin-top: 6px;
+  font-size: 14px;
+  color: #555;
+}
