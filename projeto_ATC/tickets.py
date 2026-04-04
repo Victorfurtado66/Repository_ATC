@@ -39,3 +39,32 @@ def criar_ticket(ticket: TicketCreate, user_id: str = Depends(get_current_user))
         raise HTTPException(status_code=500, detail=str(e))
     finally:
         conn.close()
+
+# ✅ Rota para listar tickets
+@router.get("/")
+def listar_tickets(user_id: str = Depends(get_current_user)):
+    conn = get_connection()
+    try:
+        cursor = conn.cursor()
+        cursor.execute("SELECT * FROM Tickets")
+        tickets = cursor.fetchall()
+        colunas = [col[0] for col in cursor.description]
+        return [dict(zip(colunas, row)) for row in tickets]
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+    finally:
+        conn.close()
+
+# ✅ Rota para deletar ticket
+@router.delete("/{ticket_id}")
+def deletar_ticket(ticket_id: int, user_id: str = Depends(get_current_user)):
+    conn = get_connection()
+    try:
+        cursor = conn.cursor()
+        cursor.execute("DELETE FROM Tickets WHERE id = ?", (ticket_id,))
+        conn.commit()
+        return {"message": "Ticket removido com sucesso"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+    finally:
+        conn.close()
