@@ -34,7 +34,7 @@ def criar_usuario(usuario: UsuarioCreate, current_user: dict = Depends(get_curre
         conn = get_connection()
         cursor = conn.cursor()
 
-        cursor.execute("SELECT id FROM usuarios WHERE email = ?", usuario.email)
+        cursor.execute("SELECT id FROM usuarios WHERE email = ?", usuario.email,))
         existente = cursor.fetchone()
         if existente:
             raise HTTPException(status_code=400, detail="Email já cadastrado")
