@@ -35,7 +35,7 @@ def login(request: LoginRequest):
     try:
         conn = get_connection()
         cursor = conn.cursor()
-        cursor.execute("SELECT id, senha, tipo FROM usuarios WHERE email = ?", request.email)
+        cursor.execute("SELECT id, senha, tipo FROM usuarios WHERE email = ?", (request.email,))
         usuario = cursor.fetchone()
 
         if not usuario:
