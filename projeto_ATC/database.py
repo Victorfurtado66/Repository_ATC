@@ -10,6 +10,3 @@ conn_str = (
 def get_connection():
     return pyodbc.connect(conn_str)
 
-
-conexao=pyodbc.connect(conn_str)
-print("Conexão bem-sucedida!")
